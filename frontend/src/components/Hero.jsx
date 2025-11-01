@@ -30,7 +30,7 @@ export default function Hero() {
             shadow-md
           "
         >
-          <p className="text-sm md:text-lg lg:text-xl text-gray-700">
+          <p className="text-sm md:text-lg lg:text-xl font-medium text-gray-700">
             New Arrival
           
           </p>
@@ -46,7 +46,7 @@ export default function Hero() {
             tellus, luctus nec ullamcorper mattis.
           </p>
 
-          <button className="bg-[#B88E2F] text-white mt-8 md:mt-10 px-8 md:px-20 py-2 md:py-6 font-medium hover:bg-[#a67a1f] transition">
+          <button className="bg-[#B88E2F] text-white mt-8 md:mt-10 px-8 md:px-20 py-2 md:py-4 font-medium hover:bg-[#a67a1f] transition">
             Buy Now
           </button>
         </div>
