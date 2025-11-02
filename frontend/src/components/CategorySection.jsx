@@ -15,9 +15,9 @@ const categories = [
 function CategorySection() {
   return (
     <section className="flex flex-col justify-center items-center my-12 w-full">
-      <h1 className="text-center font-bold text-xl md:text-3xl text-[#333333]">
+      <h2 className="text-center font-bold text-xl md:text-3xl text-[#333333]">
         Browse The Range
-      </h1>
+      </h2>
       <p className="text-center text-[#333333] text-[14px] mt-2">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </p>
