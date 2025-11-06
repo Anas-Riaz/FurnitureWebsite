@@ -69,7 +69,7 @@ const products = [
 
 function ProductSection() {
   return (
-    <section className="w-full ">
+    <section className="w-full my-10">
       <h2 className="text-center font-bold text-xl md:text-3xl text-[#333333]">
         Products
       </h2>

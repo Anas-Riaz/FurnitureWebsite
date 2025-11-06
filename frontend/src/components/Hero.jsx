@@ -1,4 +1,5 @@
 import heroImg from "../assets/hero.png";
+import Button from "./Button.jsx";
 
 export default function Hero() {
   return (
@@ -32,23 +33,20 @@ export default function Hero() {
         >
           <p className="text-sm md:text-lg lg:text-xl font-medium text-gray-700">
             New Arrival
-          
           </p>
-          
+
           <h1 className="text-[#B88E2F] text-2xl md:text-4xl lg:text-5xl font-bold leading-snug mt-3">
             Discover Our
             <br />
             New Collection
           </h1>
-          
+
           <p className="text-sm md:text-lg mt-4 text-gray-600">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
             tellus, luctus nec ullamcorper mattis.
           </p>
 
-          <button className="bg-[#B88E2F] text-white mt-8 md:mt-10 px-8 md:px-20 py-2 md:py-4 font-medium hover:bg-[#a67a1f] transition">
-            Buy Now
-          </button>
+          <Button variant="primary">Buy Now</Button>
         </div>
       </div>
     </section>
