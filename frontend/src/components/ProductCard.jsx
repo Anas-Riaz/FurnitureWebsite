@@ -1,6 +1,6 @@
 function ProductCard({ img, name, description, price }) {
   return (
-    <div className="w-full flex flex-col items-start justify-center group cursor-pointer">
+    <div className="w-full flex flex-col items-start justify-center cursor-pointer">
       <div className="relative w-full overflow-hidden">
         <img src={img} alt="" className="w-full h-full object-cover object-center"/>
       </div>
