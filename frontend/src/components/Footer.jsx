@@ -48,7 +48,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <hr />
+      <hr className="text-zinc-200 text-[2px] "/>
       <p className="mt-10">2023 furniro. All rights reserved.</p>
     </footer>
   );
