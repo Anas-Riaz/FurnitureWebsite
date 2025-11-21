@@ -1,10 +1,10 @@
-import CategoryCard from "./CategoryCard";
-import bed from "../assets/bed.png";
-import bed2 from "../assets/bed-2.png";
-import sofa from "../assets/sofa.png";
-import sofa2 from "../assets/sofa-2.png";
-import table from "../assets/table.png";
-import table2 from "../assets/table-2.png";
+import CategoryCard from "../CategoryCard.jsx";
+import bed from "../../assets/bed.png";
+import bed2 from "../../assets/bed-2.png";
+import sofa from "../../assets/sofa.png";
+import sofa2 from "../../assets/sofa-2.png";
+import table from "../../assets/table.png";
+import table2 from "../../assets/table-2.png";
 
 const categories = [
   { id:1, img1: bed, img2: bed2, category: "Bedroom" },

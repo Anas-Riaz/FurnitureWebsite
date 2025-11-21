@@ -1,14 +1,14 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-import Button from "./Button";
+import Button from "../Button.jsx";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 // import your images
-import room1 from "../assets/slider/art.png";
-import room2 from "../assets/slider/dining.png";
-import room3 from "../assets/slider/table.png";
+import room1 from "../../assets/slider/art.png";
+import room2 from "../../assets/slider/dining.png";
+import room3 from "../../assets/slider/table.png";
 
 const roomData = [
   { id: 1, img: room1, title: "Inner Peace", subtitle: "01 — Bed Room" },

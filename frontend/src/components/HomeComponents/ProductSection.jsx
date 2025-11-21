@@ -1,12 +1,12 @@
-import syltherine from "../assets/products/syltherine.png";
-import bedsheet from "../assets/products/bedsheet.png";
-import lolito from "../assets/products/lolito.png";
-import respira from "../assets/products/respira.png";
-import grifo from "../assets/products/grifo.png";
-import muggo from "../assets/products/muggo.png";
-import pingky from "../assets/products/pingky.png";
-import comfySofa from "../assets/products/potty.png";
-import ProductCard from "./ProductCard";
+import syltherine from "../../assets/products/syltherine.png";
+import bedsheet from "../../assets/products/bedsheet.png";
+import lolito from "../../assets/products/lolito.png";
+import respira from "../../assets/products/respira.png";
+import grifo from "../../assets/products/grifo.png";
+import muggo from "../../assets/products/muggo.png";
+import pingky from "../../assets/products/pingky.png";
+import comfySofa from "../../assets/products/potty.png";
+import ProductCard from "../ProductCard.jsx";
 
 const products = [
   {
