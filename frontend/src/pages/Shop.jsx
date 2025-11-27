@@ -4,6 +4,7 @@ import ProductSection from "../components/ProductSection";
 import products from "../data.js"
 import PageNavigation from "../components/PageNavigation.jsx";
 import Footer from "../components/Footer.jsx";
+import Banner from "../components/Banner.jsx";
 
 const shopProducts = [...products, ...products]
 
@@ -14,6 +15,7 @@ export default function Shop() {
       <FilterBar/>
       <ProductSection data={shopProducts} />
       <PageNavigation/>
+      <Banner/>
       <Footer/>
     </>
   );
