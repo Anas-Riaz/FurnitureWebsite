@@ -1,5 +1,9 @@
+import Title from "../components/Title";
+
 export default function Blog(){
     return(
-        <div>This is Blog Page.</div>
+        <>
+            <Title title="Blog" />
+        </>
     )
 }

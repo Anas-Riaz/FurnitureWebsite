@@ -11,7 +11,7 @@ const shopProducts = [...products, ...products]
 export default function Shop() {
   return (
     <>
-      <Title />
+      <Title title="Shop" />
       <FilterBar/>
       <ProductSection data={shopProducts} />
       <PageNavigation/>
