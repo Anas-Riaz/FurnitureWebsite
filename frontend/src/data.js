@@ -1,3 +1,5 @@
+//product images
+
 import syltherine from "./assets/products/syltherine.png";
 import bedsheet from "./assets/products/bedsheet.png";
 import lolito from "./assets/products/lolito.png";
@@ -7,6 +9,7 @@ import muggo from "./assets/products/muggo.png";
 import pingky from "./assets/products/pingky.png";
 import comfySofa from "./assets/products/potty.png";
 
+//product data
 
 const products =  [
   {
@@ -67,5 +70,55 @@ const products =  [
   },
 ];
 
+//---------------------------------------------------------------------------------------------------------------------------
 
-export default products;
+// blog images
+import blog1 from "./assets/blog/blog1.png"
+import blog2 from "./assets/blog/blog2.png"
+import blog3 from "./assets/blog/blog3.png"
+
+//blog data
+const blogs=[
+  {
+    img: blog1,
+    title: "Going all-in with millennial design",
+    category: "Woodwork",
+    date: "20 Jan, 2022",
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Libero enim sed faucibus turpis in. Cursus mattis molestie a iaculis at erat. Nibh cras pulvinar mattis nunc sed blandit libero. Pellentesque elit ullamcorper dignissim cras tincidunt. Pharetra et ultrices neque ornare aenean euismod elementum."
+  },
+  {
+    img: blog2,
+    title: "5 ways to decorate your home office",
+    category: "Interior",
+    date: "15 Feb, 2022",
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Libero enim sed faucibus turpis in. Cursus mattis molestie a iaculis at erat. Nibh cras pulvinar mattis nunc sed blandit libero. Pellentesque elit ullamcorper dignissim cras tincidunt. Pharetra et ultrices neque ornare aenean euismod elementum."
+  },
+  {
+    img: blog3,
+    title: "Top 10 modern furniture trends",
+    category: "Handmade",
+    date: "10 Mar, 2022",
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Libero enim sed faucibus turpis in. Cursus mattis molestie a iaculis at erat. Nibh cras pulvinar mattis nunc sed blandit libero. Pellentesque elit ullamcorper dignissim cras tincidunt. Pharetra et ultrices neque ornare aenean euismod elementum."
+  }
+]
+
+//---------------------------------------------------------------------------------------------------------------------------
+
+//categories images
+import bed from "./assets/bed.png";
+import bed2 from "./assets/bed-2.png";
+import sofa from "./assets/sofa.png";
+import sofa2 from "./assets/sofa-2.png";
+import table from "./assets/table.png";
+import table2 from "./assets/table-2.png";
+
+//categories data
+const categories = [
+  { id:1, img1: bed, img2: bed2, category: "Bedroom" },
+  { id:2, img1: sofa, img2: sofa2, category: "Living" },
+  { id:3, img1: table, img2: table2, category: "Dining" },
+];
+
+
+//---------------------------------------------------------------------------------------------------------------------------
+export {products, blogs, categories};
