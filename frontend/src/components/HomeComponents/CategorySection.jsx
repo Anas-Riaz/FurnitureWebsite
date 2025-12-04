@@ -1,5 +1,5 @@
 import CategoryCard from "../CategoryCard.jsx";
-import { categories } from "../../data.js";
+import { roomCategories } from "../../data.js";
 
 
 
@@ -14,7 +14,7 @@ function CategorySection() {
       </p>
       <div className="w-full flex justify-center items-center my-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-11/12 md:w-4/5 ">
-          {categories.map((item) => {
+          {roomCategories.map((item) => {
             return (
                 <CategoryCard 
                     key={item.id}

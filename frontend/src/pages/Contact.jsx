@@ -1,5 +1,13 @@
+import ContactSection from "../components/ContactComponents/ContactSection";
+import Title from "../components/Title";
+
 function Contact(){
-    return <h1>This is contact page.</h1>
+    return (
+        <>
+            <Title title="Contact Us"/>
+            <ContactSection/>
+        </>
+    )
 }
 
 export default Contact;

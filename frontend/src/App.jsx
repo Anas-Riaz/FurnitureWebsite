@@ -9,6 +9,8 @@ import Checkout from "./pages/Checkout.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import Contact from "./pages/Contact.jsx";
 
+
+// defining routes
 const router = createBrowserRouter([
   {
     path: "/",
@@ -16,7 +18,7 @@ const router = createBrowserRouter([
     children: [
       { path: "", element: <Home /> },
       {path: "shop",element: <Shop />,},
-      { path: "product/:productId", element: <ProductDetail /> },
+      { path: "shop/:productId", element: <ProductDetail /> },
       { path: "contact", element: <Contact /> },
       { path: "cart", element: <CartPage /> },
       { path: "checkout", element: <Checkout /> },
