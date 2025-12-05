@@ -1,55 +1,128 @@
-// import { useActionState } from "react";
+import { useActionState } from "react";
+import Button from "../Button";
 
-// export default function ContactForm() {
-  
-//     const [formState, formAction] = useActionState(contactFormAction, {errors : null})
+function contactFormAction(prev, formData) {
+  const name = formData.get("name");
+  const email = formData.get("email");
+  const subject = formData.get("subject");
+  const message = formData.get("message");
 
-//     function contactFormAction(prev, formData){
+  let errors = {
+    name: null,
+    email: null,
+    subject: null,
+    message: null,
+  };
 
-//     }
+  if (!name) errors.name = "Name is required";
+  if (!email) errors.email = "Email is required";
+  if (!subject) errors.subject = "Subject is required";
+  if (!message || message.trim().length < 50)
+    errors.message = "Message must be at least 50 characters";
 
-//     return (
-//     <form action={formAction}>
-//       <div className="control-row">
-//         <p className="control">
-//           <label htmlFor="userName">Your Name</label>
-//           <input
-//             type="text"
-//             id="userName"
-//             name="userName"
-//             defaultValue={formState.enteredValues?.userName}
-//           />
-//         </p>
+  if (Object.values(errors).some(Boolean)) {
+    return { errors, enteredValues: { name, email, subject, message } };
+  }
 
-//         <p className="control">
-//           <label htmlFor="title">Title</label>
-//           <input
-//             type="text"
-//             id="title"
-//             name="title"
-//             defaultValue={formState.enteredValues?.title}
-//           />
-//         </p>
-//       </div>
-//       <p className="control">
-//         <label htmlFor="body">Your Opinion</label>
-//         <textarea
-//           id="body"
-//           name="body"
-//           rows={5}
-//           defaultValue={formState.enteredValues?.body}
-//         ></textarea>
-//       </p>
+  return { errors: null, success: true };
+}
 
-//       {formState.errors && (
-//         <ul className="errors">
-//           {formState.errors.map((error, index) => {
-//             return <li key={error}>{error}</li>;
-//           })}
-//         </ul>
-//       )}
+export default function ContactForm() {
+  const [formState, formAction, isPending] = useActionState(contactFormAction, {
+    errors: null,
+  });
 
-//       <Submit />
-//     </form>
-//   );
-// }
+  return (
+    <form action={formAction} className="w-full flex flex-col gap-4">
+      {/* Name */}
+      <div className="flex flex-col gap-1 w-full">
+        {formState.errors?.name && (
+          <p className="text-red-500 text-sm">{formState.errors.name}</p>
+        )}
+        <label htmlFor="name" className="font-medium">
+          Your name
+        </label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          className="w-full p-4 border rounded-lg border-[#9F9F9F] text-sm sm:text-base"
+          defaultValue={formState.enteredValues?.name}
+        />
+      </div>
+
+      {/* Email */}
+      <div className="flex flex-col gap-1 w-full">
+        {formState.errors?.email && (
+          <p className="text-red-500 text-sm">{formState.errors.email}</p>
+        )}
+        <label htmlFor="email" className="font-medium">
+          Email Address
+        </label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          className="w-full p-4 border rounded-lg border-[#9F9F9F] text-sm sm:text-base"
+          defaultValue={formState.enteredValues?.email}
+        />
+      </div>
+
+      {/* Subject */}
+      <div className="flex flex-col gap-1 w-full">
+        {formState.errors?.subject && (
+          <p className="text-red-500 text-sm">{formState.errors.subject}</p>
+        )}
+        <label htmlFor="subject" className="font-medium">
+          Subject
+        </label>
+        <input
+          type="text"
+          name="subject"
+          id="subject"
+          className="w-full p-4 border rounded-lg border-[#9F9F9F] text-sm sm:text-base"
+          defaultValue={formState.enteredValues?.subject}
+        />
+      </div>
+
+      {/* Message */}
+      <div className="flex flex-col gap-1 w-full">
+        {formState.errors?.message && (
+          <p className="text-red-500 text-sm">{formState.errors.message}</p>
+        )}
+        <label htmlFor="message" className="font-medium">
+          Message
+        </label>
+        <textarea
+          name="message"
+          id="message"
+          className="w-full p-4 border rounded-lg border-[#9F9F9F] min-h-[140px] resize-none text-sm sm:text-base"
+          defaultValue={formState.enteredValues?.message}
+        />
+      </div>
+
+      {/* Submit */}
+      <div className="w-full sm:w-auto mt-4">
+        <Button
+          type="submit"
+          variant="primary"
+          disabled={isPending}
+          className={
+            isPending
+              ? "opacity-50 cursor-not-allowed w-full sm:w-auto"
+              : "w-full sm:w-auto"
+          }
+        >
+          {isPending ? "Sending..." : "Submit"}
+        </Button>
+      </div>
+
+      {/* Success Message */}
+      {formState.success && (
+        <p className="text-green-600 mt-4 text-center">
+          Message sent successfully!
+        </p>
+      )}
+    </form>
+  );
+}

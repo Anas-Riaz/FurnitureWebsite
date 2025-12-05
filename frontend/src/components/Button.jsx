@@ -1,7 +1,7 @@
 function Button({ children, variant = "primary", className = "", ...props }) {
   // Common base styles (shared between both buttons)
   const baseStyles =
-    "transition-all duration-200 font-medium rounded-sm";
+    "transition-all duration-200 font-medium rounded";
 
   // Variant-specific styles
   const variants = {
