@@ -3,7 +3,7 @@ import ContactForm from "./ContactForm";
 
 export default function ContactSection() {
   return (
-    <section className="mt-8 w-full flex justify-center px-4 sm:px-6 lg:px-8">
+    <section className="my-16 w-full flex justify-center px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-6xl flex flex-col gap-8">
         {/* Heading */}
         <div className="flex flex-col gap-2 justify-center items-center text-center">
